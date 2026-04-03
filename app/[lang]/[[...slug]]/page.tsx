@@ -13,6 +13,8 @@ import { ClickToEdit } from 'react-bricks/rsc/client'
 
 import ErrorNoKeys from '@/components/errorNoKeys'
 import ErrorNoPage from '@/components/errorNoPage'
+import BBHomePage from '@/components/BBHomePage'
+import BBAboutPage from '@/components/BBAboutPage'
 import config from '@/react-bricks/config'
 
 const getData = async (
@@ -104,10 +106,20 @@ export default async function Page(props: {
   params: Promise<{ lang: string; slug?: string[] }>
 }) {
   const params = await props.params
-  const { page, errorNoKeys, errorPage } = await getData(
-    params.slug?.join('/'),
-    params.lang
-  )
+  const rawSlug = params.slug?.join('/')
+  const isHome = !rawSlug || rawSlug === '/'
+
+  // Home page is rendered directly with static Bonded Bean content
+  if (isHome) {
+    return <BBHomePage />
+  }
+
+  // About page
+  if (rawSlug === 'about') {
+    return <BBAboutPage />
+  }
+
+  const { page, errorNoKeys, errorPage } = await getData(rawSlug, params.lang)
 
   // Clean the received content
   // Removes unknown or not allowed bricks

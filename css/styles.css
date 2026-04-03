@@ -1,2 +1,15 @@
 @import '@reactbricks/reactbricks-ui-rsc/styles.css';
 /* @import '@reactbricks/email-ui-rsc/styles.css'; <<EMAIL_BRICKS>> */
+
+@theme {
+  /* Bonded Bean brand palette */
+  --color-cream: #F5EFE6;
+  --color-coffee: #8B5A3C;
+  --color-coffee-dark: #6E442C;
+  --color-sage: #8FAF8C;
+  --color-sage-light: #C5D9C4;
+
+  /* Brand typography */
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}

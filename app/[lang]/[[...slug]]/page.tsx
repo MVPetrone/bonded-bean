@@ -15,6 +15,7 @@ import ErrorNoKeys from '@/components/errorNoKeys'
 import ErrorNoPage from '@/components/errorNoPage'
 import BBHomePage from '@/components/BBHomePage'
 import BBAboutPage from '@/components/BBAboutPage'
+import BBEventsPage from '@/components/BBEventsPage'
 import config from '@/react-bricks/config'
 
 const getData = async (
@@ -117,6 +118,11 @@ export default async function Page(props: {
   // About page
   if (rawSlug === 'about') {
     return <BBAboutPage />
+  }
+
+  // Events page
+  if (rawSlug === 'events') {
+    return <BBEventsPage />
   }
 
   const { page, errorNoKeys, errorPage } = await getData(rawSlug, params.lang)

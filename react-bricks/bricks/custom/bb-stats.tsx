@@ -5,6 +5,7 @@ interface BBStatsProps {
   title: types.TextValue
   backgroundVariant: 'cream' | 'white'
   anchorId: string
+  items: types.RepeaterItems
 }
 
 const BBStats: types.Brick<BBStatsProps> = ({
@@ -12,6 +13,7 @@ const BBStats: types.Brick<BBStatsProps> = ({
   title,
   backgroundVariant,
   anchorId,
+  items,
 }) => {
   return (
     <section
@@ -44,7 +46,7 @@ const BBStats: types.Brick<BBStatsProps> = ({
           />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-coffee/10">
-          <Repeater propName="items" />
+          <Repeater propName="items" items={items} />
         </div>
       </div>
     </section>

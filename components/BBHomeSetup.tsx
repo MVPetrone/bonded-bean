@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const steps = [
   {
     number: '1',
@@ -5,12 +7,12 @@ const steps = [
     description: (
       <>
         Visit{' '}
-        <a
+        <Link
           href="/admin"
           className="text-coffee underline underline-offset-2 hover:text-coffee-dark transition-colors font-medium"
         >
           /admin
-        </a>{' '}
+        </Link>{' '}
         and log in, then open the editor.
       </>
     ),
@@ -89,12 +91,12 @@ const BBHomeSetup = () => {
           ))}
         </ol>
 
-        <a
+        <Link
           href="/admin"
           className="inline-flex items-center px-7 py-3.5 bg-coffee text-white font-semibold rounded-full hover:bg-coffee-dark transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-coffee focus-visible:ring-offset-2"
         >
           Open the editor →
-        </a>
+        </Link>
       </div>
     </main>
   )

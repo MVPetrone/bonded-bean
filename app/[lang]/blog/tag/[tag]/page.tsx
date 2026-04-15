@@ -38,7 +38,6 @@ const getData = async (
       pageSize: 1000,
       sort: '-publishedAt',
       config,
-      fetchOptions: { next: { revalidate: 3 } },
     }).catch(() => {
       errorPage = true
       return null
@@ -47,11 +46,6 @@ const getData = async (
       page: undefined,
       pageSize: undefined,
       filterBy: undefined,
-      fetchOptions: {
-        next: {
-          revalidate: 3,
-        },
-      },
       config,
     }),
   ])
@@ -80,14 +74,7 @@ export async function generateStaticParams() {
         config,
       })
 
-      return tags.map((tag) => ({
-        lang,
-        tag,
-      }))
-    })
-  )
-
-  return tagsByLocale.flat()
+  return tags.map((tag) => ({ tag }))
 }
 
 export async function generateMetadata(props: {

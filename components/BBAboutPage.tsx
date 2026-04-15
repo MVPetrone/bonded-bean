@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const BBAboutPage = () => {
   return (
     <>
@@ -175,18 +177,31 @@ const BBAboutPage = () => {
             table for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
             <link
+=======
+            <Link
+>>>>>>> attempt-2
               href="/events"
               className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-full transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-white text-coffee-dark hover:bg-cream focus-visible:ring-white"
             >
               See Upcoming Socials
+<<<<<<< HEAD
             </link>
             <link
+=======
+            </Link>
+            <Link
+>>>>>>> attempt-2
               href="/"
               className="text-base font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-coffee rounded text-white/80 hover:text-white underline underline-offset-4"
             >
               Back to Home
+<<<<<<< HEAD
             </link>
+=======
+            </Link>
+>>>>>>> attempt-2
           </div>
         </div>
       </section>

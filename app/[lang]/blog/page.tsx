@@ -4,6 +4,7 @@ import { fetchPages, fetchTags, types } from 'react-bricks/rsc'
 import PostListItem from '@/components/PostListItem'
 import TagListItem from '@/components/TagListItem'
 import ErrorNoKeys from '@/components/errorNoKeys'
+import { i18n } from '@/i18n-config'
 import config from '@/react-bricks/config'
 
 const getData = async (
@@ -33,11 +34,6 @@ const getData = async (
       page: undefined,
       pageSize: undefined,
       filterBy: undefined,
-      fetchOptions: {
-        next: {
-          revalidate: 3,
-        },
-      },
       config,
     }),
     fetchPages({
@@ -46,7 +42,6 @@ const getData = async (
       sort: '-publishedAt',
       fetchExternalData: true,
       config,
-      fetchOptions: { next: { revalidate: 3 } },
     }).catch(() => {
       errorPage = true
       return null
@@ -59,6 +54,12 @@ const getData = async (
     errorNoKeys,
     errorPage,
   }
+}
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({
+    lang: locale,
+  }))
 }
 
 export async function generateMetadata(): Promise<Metadata> {

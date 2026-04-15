@@ -7,6 +7,7 @@ interface BBFeaturesProps {
   backgroundVariant: 'cream' | 'white'
   columns: '2' | '3'
   anchorId: string
+  cards: types.RepeaterItems
 }
 
 const BBFeatures: types.Brick<BBFeaturesProps> = ({
@@ -16,6 +17,7 @@ const BBFeatures: types.Brick<BBFeaturesProps> = ({
   backgroundVariant,
   columns,
   anchorId,
+  cards,
 }) => {
   return (
     <section
@@ -65,7 +67,11 @@ const BBFeatures: types.Brick<BBFeaturesProps> = ({
               : 'sm:grid-cols-2 lg:grid-cols-3'
           }`}
         >
+<<<<<<< HEAD
           <Repeater propName="cards" items={[]} />
+=======
+          <Repeater propName="cards" items={cards} />
+>>>>>>> attempt-2
         </div>
       </div>
     </section>

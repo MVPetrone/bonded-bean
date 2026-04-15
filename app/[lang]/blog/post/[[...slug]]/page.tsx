@@ -51,7 +51,6 @@ const getData = async (
     slug: cleanSlug,
     language: locale,
     config,
-    fetchOptions: { next: { revalidate: 3 } },
   }).catch(() => {
     errorPage = true
     return null

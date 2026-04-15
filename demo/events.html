@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events – Bonded Bean</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ── Navbar ── -->
+  <header class="navbar">
+    <nav class="navbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">BB</span>
+        <span class="brand-name">Bonded Bean</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+      </ul>
+      <a href="events.html" class="btn btn-sm">Join a Social</a>
+    </nav>
+  </header>
+
+  <!-- ── Hero ── -->
+  <section class="hero bg-cream">
+    <div class="container-narrow text-center">
+      <span class="badge">Upcoming Socials</span>
+      <h1>Find your next social.</h1>
+      <p class="lead">
+        Every Bonded Bean event is free, open to everyone, and designed to
+        make real connection easy. Just show up — we&rsquo;ll handle the rest.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── How It Works ── -->
+  <section class="section bg-white" style="padding-top:3rem;padding-bottom:3rem;">
+    <div class="container">
+      <div class="card-grid cols-3">
+        <div class="text-center" style="padding:1.5rem;">
+          <div class="step-circle" style="margin:0 auto 0.75rem;">01</div>
+          <h3>Pick an event</h3>
+          <p class="small-text">Browse the list below and find a date, time, and venue that works for you.</p>
+        </div>
+        <div class="text-center" style="padding:1.5rem;">
+          <div class="step-circle accent-sage" style="margin:0 auto 0.75rem;">02</div>
+          <h3>Just show up</h3>
+          <p class="small-text">No tickets, no sign-up. Arrive at the venue and look for the Bonded Bean table.</p>
+        </div>
+        <div class="text-center" style="padding:1.5rem;">
+          <div class="step-circle" style="margin:0 auto 0.75rem;">03</div>
+          <h3>Connect</h3>
+          <p class="small-text">We provide conversation cards and a warm welcome. Leave with new connections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Event List ── -->
+  <section class="section bg-cream">
+    <div class="container" style="max-width:56rem;">
+      <div class="text-center section-header">
+        <span class="section-label">What&rsquo;s Coming Up</span>
+        <h2>Upcoming events</h2>
+      </div>
+
+      <div class="event-list">
+        <!-- Event 1 -->
+        <article class="event-card">
+          <div class="event-date">
+            <span class="event-day">Sat 19 Apr</span>
+            <span class="event-time">10:30 am – 12:00 pm</span>
+          </div>
+          <div class="event-details">
+            <h3>Saturday Morning Social</h3>
+            <p class="event-venue">The Grind House <span class="muted">· 42 Clarendon St, Nottingham</span></p>
+            <p>Our flagship weekly social. Grab a coffee, meet new people, and enjoy relaxed conversation with the help of our icebreaker cards.</p>
+            <div class="event-meta">
+              <span class="spots-badge">16 spots</span>
+              <span class="muted small-text">Free · No sign-up required</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="event-card">
+          <div class="event-date accent">
+            <span class="event-day">Wed 23 Apr</span>
+            <span class="event-time">6:00 pm – 7:30 pm</span>
+          </div>
+          <div class="event-details">
+            <h3>Midweek Wind-Down</h3>
+            <p class="event-venue">Cartwheel Coffee <span class="muted">· 16 Low Pavement, Nottingham</span></p>
+            <p>A chilled evening session to break up the working week. Small groups, good coffee, honest conversation.</p>
+            <div class="event-meta">
+              <span class="spots-badge">12 spots</span>
+              <span class="muted small-text">Free · No sign-up required</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 3 -->
+        <article class="event-card">
+          <div class="event-date">
+            <span class="event-day">Sat 26 Apr</span>
+            <span class="event-time">10:30 am – 12:00 pm</span>
+          </div>
+          <div class="event-details">
+            <h3>Saturday Morning Social</h3>
+            <p class="event-venue">The Grind House <span class="muted">· 42 Clarendon St, Nottingham</span></p>
+            <p>Another chance to join our Saturday crew. Whether it&rsquo;s your first time or your fiftieth — you&rsquo;re welcome.</p>
+            <div class="event-meta">
+              <span class="spots-badge">16 spots</span>
+              <span class="muted small-text">Free · No sign-up required</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 4 -->
+        <article class="event-card">
+          <div class="event-date accent">
+            <span class="event-day">Sun 4 May</span>
+            <span class="event-time">11:00 am – 1:00 pm</span>
+          </div>
+          <div class="event-details">
+            <h3>Coffee &amp; Walk</h3>
+            <p class="event-venue">Meet at Blend, Hockley <span class="muted">· 9 Broad St, Nottingham</span></p>
+            <p>Grab a takeaway coffee then join us for a gentle walk through the city. Moving together makes talking easier.</p>
+            <div class="event-meta">
+              <span class="spots-badge">20 spots</span>
+              <span class="muted small-text">Free · No sign-up required</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="section bg-white">
+    <div class="container-narrow">
+      <div class="text-center section-header">
+        <span class="section-label">Common Questions</span>
+        <h2>Everything you need to know.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Do I need to book or sign up?</h3>
+          <p>Nope! All our events are drop-in. Just turn up at the venue and look for the Bonded Bean table.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is it really free?</h3>
+          <p>Yes — attending is always free. You just buy your own coffee from the café.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if I don&rsquo;t know anyone?</h3>
+          <p>That&rsquo;s the whole point! Most people come alone. We use conversation cards and small groups to make sure nobody feels left out.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What age group is it for?</h3>
+          <p>Our socials are mainly aimed at 18–35 year olds, but everyone is welcome.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I bring a friend?</h3>
+          <p>Absolutely. Bring one, bring five — the more the merrier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="section bg-coffee cta">
+    <div class="container-narrow text-center">
+      <h2>Your next great conversation is waiting.</h2>
+      <p>
+        No pressure, no awkwardness — just good people and better coffee.
+        We&rsquo;d love to see you at the next one.
+      </p>
+      <div class="cta-actions">
+        <a href="about.html" class="btn btn-white">Learn About Us</a>
+        <a href="index.html" class="cta-link">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark brand-mark-footer">BB</span>
+            <span class="brand-name-footer">Bonded Bean</span>
+          </div>
+          <p class="footer-tagline">Creating warm, low-pressure spaces for real-world connection — one cup of coffee at a time.</p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Follow Along</h3>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/bonded.bean" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://tiktok.com/@bonded.bean" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Bonded Bean. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

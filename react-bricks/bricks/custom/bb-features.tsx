@@ -65,7 +65,7 @@ const BBFeatures: types.Brick<BBFeaturesProps> = ({
               : 'sm:grid-cols-2 lg:grid-cols-3'
           }`}
         >
-          <Repeater propName="cards" />
+          <Repeater propName="cards" items={[]} />
         </div>
       </div>
     </section>

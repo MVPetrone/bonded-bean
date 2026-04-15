@@ -44,7 +44,7 @@ const BBStats: types.Brick<BBStatsProps> = ({
           />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-coffee/10">
-          <Repeater propName="items" />
+          <Repeater propName="cards" items={[]} />
         </div>
       </div>
     </section>

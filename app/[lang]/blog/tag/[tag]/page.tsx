@@ -5,6 +5,7 @@ import { fetchPages, fetchTags, types } from 'react-bricks/rsc'
 import PostListItem from '@/components/PostListItem'
 import TagListItem from '@/components/TagListItem'
 import ErrorNoKeys from '@/components/errorNoKeys'
+import { i18n } from '@/i18n-config'
 import config from '@/react-bricks/config'
 
 const getData = async (
@@ -63,25 +64,30 @@ const getData = async (
   }
 }
 
-export async function generateStaticParams({
-  params,
-}: {
-  params: { lang: string }
-}) {
+export async function generateStaticParams() {
   if (!config.apiKey) {
     return []
   }
 
-  const { items: tags } = await fetchTags({
-    page: undefined,
-    pageSize: undefined,
-    filterBy: {
-      language: params.lang,
-    },
-    config,
-  })
+  const tagsByLocale = await Promise.all(
+    i18n.locales.map(async (lang) => {
+      const { items: tags } = await fetchTags({
+        page: undefined,
+        pageSize: undefined,
+        filterBy: {
+          language: lang,
+        },
+        config,
+      })
 
-  return tags
+      return tags.map((tag) => ({
+        lang,
+        tag,
+      }))
+    })
+  )
+
+  return tagsByLocale.flat()
 }
 
 export async function generateMetadata(props: {

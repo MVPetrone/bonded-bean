@@ -17,7 +17,7 @@ import { i18n } from '@/i18n-config'
 import config from '@/react-bricks/config'
 
 const getData = async (
-  slug: any,
+  slug: string | string[],
   locale: string
 ): Promise<{
   page: types.Page | null
@@ -37,15 +37,7 @@ const getData = async (
     }
   }
 
-  let cleanSlug = ''
-
-  if (!slug) {
-    cleanSlug = '/'
-  } else if (typeof slug === 'string') {
-    cleanSlug = slug
-  } else {
-    cleanSlug = slug.join('/')
-  }
+  const cleanSlug = typeof slug === 'string' ? slug : slug.join('/')
 
   const page = await fetchPage({
     slug: cleanSlug,
@@ -90,10 +82,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ lang: string; slug?: string[] }>
+  params: Promise<{ lang: string; slug: string[] }>
 }): Promise<Metadata> {
   const params = await props.params
-  const { page } = await getData(params.slug?.join('/'), params.lang)
+  const { page } = await getData(params.slug, params.lang)
   if (!page?.meta) {
     return {}
   }
@@ -102,16 +94,14 @@ export async function generateMetadata(props: {
 }
 
 export default async function Page(props: {
-  params: Promise<{ lang: string; slug?: string[] }>
+  params: Promise<{ lang: string; slug: string[] }>
 }) {
   const params = await props.params
   const { page, errorNoKeys, errorPage } = await getData(
-    params.slug?.join('/'),
+    params.slug,
     params.lang
   )
 
-  // Clean the received content
-  // Removes unknown or not allowed bricks
   const bricks = getBricks()
   const pageOk = page ? cleanPage(page, config.pageTypes || [], bricks) : null
 

@@ -5,12 +5,12 @@ const steps = [
     description: (
       <>
         Visit{' '}
-        <a
+        <link
           href="/admin"
           className="text-coffee underline underline-offset-2 hover:text-coffee-dark transition-colors font-medium"
         >
           /admin
-        </a>{' '}
+        </link>{' '}
         and log in, then open the editor.
       </>
     ),
@@ -89,12 +89,12 @@ const BBHomeSetup = () => {
           ))}
         </ol>
 
-        <a
+        <link
           href="/admin"
           className="inline-flex items-center px-7 py-3.5 bg-coffee text-white font-semibold rounded-full hover:bg-coffee-dark transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-coffee focus-visible:ring-offset-2"
         >
           Open the editor →
-        </a>
+        </link>
       </div>
     </main>
   )
